@@ -1,0 +1,292 @@
+<!doctype html><html lang="en" data-theme="dark"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hadia Nawaz — Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#080810;--bg2:#10101B;--p:#9565FF;--p2:#B69AFF;--p3:#D8CBFF;--tx:#F7F5FF;--mu:#A5A1B7;--card:#10101Bcc;--bd:#9565ff33}
+[data-theme=light]{--bg:#F8F7FF;--bg2:#fff;--p:#7045E8;--p2:#9A7AFF;--p3:#7045E8;--tx:#191629;--mu:#68647B;--card:#ffffffcc;--bd:#7045e83a}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.7 Inter,sans-serif;overflow-x:hidden;transition:background .4s,color .4s}
+h1,h2,h3,.logo{font-family:'Space Grotesk',sans-serif;line-height:1.15}h2{font-size:clamp(1.8rem,4vw,2.6rem)}
+a{color:var(--p2)}section{padding:6rem 1.5rem;max-width:1100px;margin:auto}
+#progress{position:fixed;top:0;left:0;height:3px;background:var(--p);z-index:60;width:0}
+.nav{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:50;display:flex;align-items:center;gap:1rem;padding:.5rem 1rem;border:1px solid var(--bd);border-radius:99px;background:var(--card);backdrop-filter:blur(14px);width:min(94vw,820px)}
+.logo{font-weight:700;text-decoration:none;color:var(--p2)}.links{display:flex;gap:1rem;margin:0 auto}
+.links a{color:var(--mu);text-decoration:none;font-size:.9rem;padding-bottom:2px;background:linear-gradient(var(--p),var(--p)) 0 100%/0 2px no-repeat;transition:.3s}.links a.on,.links a:hover{color:var(--tx);background-size:100% 2px}
+.nav button{background:none;border:1px solid var(--bd);color:var(--tx);border-radius:50%;width:36px;height:36px;cursor:pointer}#menu{display:none}
+.hero{display:grid;grid-template-columns:1fr 1fr;align-items:center;min-height:100vh;max-width:1200px;gap:1rem;padding-top:6rem}
+#scene{width:100%;height:min(70vh,560px);order:2}.hero-text{order:1}.hero h1{font-size:clamp(2.8rem,7vw,5rem);margin:.2rem 0}
+.label{letter-spacing:.3em;color:var(--p2);font-size:.8rem}.inst{color:var(--p2)}
+.btn{display:inline-block;padding:.75rem 1.5rem;border-radius:99px;border:1px solid var(--p);color:var(--tx);text-decoration:none;cursor:pointer;background:none;font:inherit;transition:.3s}
+.btn.primary{background:var(--p);color:#fff}.btn:hover{box-shadow:0 0 24px var(--p);transform:translateY(-2px)}
+.grid2{display:grid;grid-template-columns:1.4fr 1fr;gap:2rem;align-items:center}
+.card{border:1px solid var(--bd);background:var(--card);border-radius:16px;padding:1.5rem;transition:box-shadow .3s;backdrop-filter:blur(8px)}.card:hover{box-shadow:0 0 30px #9565ff33}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.2rem}
+.mono{font:700 3rem 'Space Grotesk';background:linear-gradient(120deg,var(--p),var(--p3),var(--p2));-webkit-background-clip:text;color:transparent}
+.holo li{color:var(--mu)}.pill{display:inline-block;padding:.15rem .8rem;border:1px solid var(--p);border-radius:99px;font-size:.8rem;color:var(--p2)}
+.ic{font-size:1.6rem;color:var(--p2)}.timeline{border-left:3px solid var(--p)}
+form{display:grid;gap:1rem;max-width:560px}label{display:grid;gap:.3rem;font-size:.9rem}
+input,textarea{background:var(--bg2);color:var(--tx);border:1px solid var(--bd);border-radius:10px;padding:.7rem;font:inherit}input:focus,textarea:focus{outline:2px solid var(--p)}
+small{color:#ff7a90;min-height:1em}[aria-invalid=true]{border-color:#ff7a90}
+#top{position:fixed;left:1.2rem;bottom:1.2rem;width:42px;height:42px;border-radius:50%;border:1px solid var(--bd);background:var(--card);color:var(--tx);opacity:0;pointer-events:none;transition:.3s;cursor:pointer;z-index:40}#top.show{opacity:1;pointer-events:auto}
+.launch{position:fixed;right:1.2rem;bottom:1.2rem;width:58px;height:58px;border-radius:50%;border:1px solid var(--p3);background:linear-gradient(135deg,var(--p),var(--p2));color:#fff;font-size:1.5rem;cursor:pointer;z-index:70;animation:fl 3s ease-in-out infinite;box-shadow:0 0 22px #9565ff88}
+.tip{position:absolute;right:68px;top:16px;font:.75rem Inter;background:var(--bg2);color:var(--tx);padding:.3rem .6rem;border-radius:8px;white-space:nowrap;opacity:0;transition:.3s;pointer-events:none}.launch:hover .tip{opacity:1}
+@keyframes fl{50%{transform:translateY(-6px)}}
+.panel{position:fixed;right:1.2rem;bottom:5.8rem;width:min(380px,calc(100vw - 2rem));height:min(540px,calc(100vh - 8rem));display:flex;flex-direction:column;background:var(--bg2);border:1px solid var(--bd);border-radius:18px;z-index:70;overflow:hidden;animation:pop .3s}
+.panel[hidden]{display:none}@keyframes pop{from{opacity:0;transform:translateY(16px) scale(.96)}}
+.panel header{display:flex;align-items:center;gap:.6rem;padding:.8rem;border-bottom:1px solid var(--bd)}.panel header div{flex:1;display:grid;line-height:1.2}.panel header small{color:var(--mu)}
+.panel header button{background:none;border:0;color:var(--tx);font-size:1.2rem;cursor:pointer}.av{width:34px;height:34px;border-radius:50%;background:var(--p);display:grid;place-items:center;font-size:.8rem;color:#fff}
+.msgs{flex:1;overflow:auto;padding:1rem;display:flex;flex-direction:column;gap:.6rem}.m{max-width:85%;padding:.6rem .9rem;border-radius:14px;white-space:pre-wrap;font-size:.92rem;animation:pop .3s}
+.m small{display:block;color:var(--mu);font-size:.65rem;min-height:0}.m.a{background:var(--bg);border:1px solid var(--bd)}.m.u{align-self:flex-end;background:var(--p);color:#fff}.m.u small{color:#ffffffaa}.typing{opacity:.6}
+.quick{display:flex;flex-wrap:wrap;gap:.4rem;padding:0 1rem .6rem}.quick button{background:none;border:1px solid var(--p);color:var(--p2);border-radius:99px;padding:.3rem .8rem;cursor:pointer;font-size:.8rem}.quick button:hover{background:var(--p);color:#fff}
+.in{display:flex;gap:.5rem;padding:.7rem;border-top:1px solid var(--bd)}.in input{flex:1}.in button{background:var(--p);border:0;color:#fff;border-radius:10px;width:42px;cursor:pointer}.in button:disabled{opacity:.4;cursor:not-allowed}
+@media(max-width:768px){.hero,.grid2{grid-template-columns:1fr}#scene{order:0;height:40vh}.hero-text{order:1}#menu{display:block;margin-left:auto}
+.links{display:none;position:absolute;top:56px;left:0;right:0;flex-direction:column;background:var(--bg2);padding:1rem;border:1px solid var(--bd);border-radius:16px}.links.open{display:flex}.nav{justify-content:space-between}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto}}
+
+.nav{transition:padding .3s}.nav.sm{padding:.3rem .9rem}
+.glow{position:fixed;width:46vmax;height:46vmax;border-radius:50%;filter:blur(90px);opacity:.18;z-index:-1;pointer-events:none;background:var(--p)}.g1{top:-15vmax;left:-12vmax}.g2{bottom:-20vmax;right:-15vmax;background:var(--p2)}
+.w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.12em;margin-right:.25em}.w>span{display:inline-block}
+.timeline{position:relative;border-left:3px solid var(--bd)}.timeline::before{content:'';position:absolute;left:-3px;top:0;bottom:0;width:3px;background:var(--p);transform-origin:top;transform:scaleY(var(--t,1));box-shadow:0 0 12px var(--p)}
+section.flash{animation:flash 1.4s}@keyframes flash{30%{background:#9565ff22}}
+.launch{display:grid;place-items:center}.badge{position:absolute;top:-3px;right:-3px;min-width:20px;height:20px;border-radius:50%;background:#ff5d8f;color:#fff;font:700 .7rem/20px Inter;font-style:normal;text-align:center}.badge[hidden]{display:none}
+.nudge .launch{animation:fl 3s ease-in-out infinite,ring 1.6s infinite}@keyframes ring{0%{box-shadow:0 0 0 0 #9565ffaa}70%{box-shadow:0 0 0 18px #9565ff00}}
+.dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#4ade80;margin-right:.35rem}
+.m{line-height:1.5}.m .t{display:block}.m.a{border-top-left-radius:4px}.m.u{border-top-right-radius:4px}
+.typing{display:flex;gap:4px;padding:.8rem 1rem;opacity:1}.typing i{width:7px;height:7px;border-radius:50%;background:var(--p2);animation:bn 1s infinite}.typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}@keyframes bn{40%{transform:translateY(-5px)}0%,100%{opacity:.4}}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem}.chips button,.go{background:none;border:1px solid var(--p);color:var(--p2);border-radius:99px;padding:.25rem .75rem;cursor:pointer;font:inherit;font-size:.78rem}.go{display:block;margin-top:.5rem;background:var(--p);color:#fff}.chips button:hover{background:var(--p);color:#fff}
+.started .quick{display:none}.quick{flex-wrap:nowrap;overflow-x:auto}.quick button{white-space:nowrap}
+.panel header button{width:30px;height:30px;border-radius:8px}.panel header button:hover{background:var(--bd)}
+@media(max-width:520px){.panel{right:0;left:0;bottom:0;width:100%;height:80vh;border-radius:18px 18px 0 0}.chat.open .launch{display:none}}
+
+</style></head><body>
+<div id="progress"></div><div class="glow g1"></div><div class="glow g2"></div>
+<nav class="nav"><a href="#home" class="logo">HN</a><div class="links" id="links">
+<a href="#home">Home</a><a href="#about">About</a><a href="#education">Education</a><a href="#learning">Learning</a><a href="#projects">Projects</a><a href="#contact">Contact</a></div>
+<button id="theme" aria-label="Toggle theme">◐</button><button id="menu" aria-label="Menu">☰</button></nav>
+<main>
+<section id="home" class="hero"><canvas id="scene" aria-hidden="true"></canvas><div class="hero-text">
+<p class="label">HELLO, I'M</p><h1>Hadia Nawaz</h1><h2>BS Artificial Intelligence Student</h2><p class="inst">Superior University Gold Campus</p>
+<p>Curious about the future of technology, exploring artificial intelligence, and building my journey one idea at a time.</p>
+<a class="btn primary" href="#about">Explore My World</a> <a class="btn" href="#contact">Let's Connect</a></div></section>
+<section id="about"><h2 class="rv">A Curious Mind, A Future in AI</h2><div class="grid2"><p class="rv">I'm Hadia Nawaz, a BS Artificial Intelligence student at Superior University Gold Campus. I'm exploring the world of AI, discovering new ideas, and developing my understanding of technology. This portfolio is where I share my educational journey, future projects, and the progress I make along the way.</p>
+<div class="card holo rv"><div class="mono">HN</div><ul><li>Always Curious</li><li>Learning Every Day</li><li>Exploring What's Possible</li></ul></div></div></section>
+<section id="education"><h2 class="rv">Education</h2><div class="card rv timeline"><h3>BS Artificial Intelligence</h3><p>Superior University — Gold Campus</p><span class="pill">Currently Studying</span></div></section>
+<section id="learning"><h2 class="rv">Growing One Step at a Time</h2><div class="cards" id="learn"></div></section>
+<section id="projects"><h2 class="rv">Little Ideas. Big Possibilities.</h2><div class="cards" id="proj"></div></section>
+<section id="contact"><h2 class="rv">Let's Start a Conversation</h2><p class="rv">Interested in connecting or learning more about Hadia's journey? Send a message below.</p>
+<form id="form" novalidate class="card"><div id="social"></div>
+<label>Name<input name="name" required><small></small></label><label>Email<input name="email" type="email" required><small></small></label>
+<label>Subject<input name="subject" required><small></small></label><label>Message<textarea name="message" rows="4" required></textarea><small></small></label>
+<button class="btn primary" id="send">Send via email app</button><p id="result" role="status"></p></form></section>
+</main>
+<button id="top" aria-label="Back to top">↑</button>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+const learning = [
+ { title:'Artificial Intelligence', status:'Exploring', icon:'✦' },
+ { title:'Programming', status:'Learning', icon:'⌘' },
+ { title:'Creative Thinking', status:'Developing', icon:'◈' },
+ { title:'Future Technologies', status:'Exploring', icon:'⬡' }];
+const projects = [
+ { title:'My First AI Experiment', description:'A first step into hands-on AI. Details coming soon.', image:'', status:'Coming Soon', url:'' },
+ { title:'Creative Digital Experience', description:'An idea in progress, blending design and technology.', image:'', status:'In Progress', url:'' },
+ { title:'Future Innovation', description:'A space reserved for what comes next.', image:'', status:'Coming Soon', url:'' }];
+const contact = { email:'', linkedin:'', github:'' }; // empty links stay hidden
+const chat = {
+ mode:'demo', // 'demo' | 'ai' (needs server.js + OPENAI_API_KEY)
+ welcome:"Hey there! 👋 Welcome to Hadia's portfolio.\n\nI'm her portfolio assistant. You can ask me about her education, learning journey, interests, projects, or how to get in touch.\n\nWhat would you like to explore?",
+ quick:[['About Hadia','about'],['Her Education','education'],['Learning Journey','learning'],['Projects','projects'],['Contact Information','contact']],
+ labels:{about:'About Hadia',education:'Her Education',learning:'Learning Journey',projects:'Projects',contact:'Contact Information',skills:'Skills & achievements',location:'Where is she from?',experience:'Is she experienced?'},
+ fallback:"I don't have that information, and I don't want to guess. I can tell you about Hadia's education, learning journey, projects, or how to get in touch." };
+// k: keywords (multi-word = phrase). a: answer. more: follow-up text. link: section id. chips: suggested follow-ups
+const kb = [
+ { id:'about', k:['who','about','hadia','nawaz','introduce','introduction','profile','interest','interests','kaun','bare'], a:"Hadia Nawaz is a BS Artificial Intelligence student at Superior University Gold Campus. This portfolio shares her educational journey, interests, and growing exploration of technology and AI.", more:"She describes herself as curious about the future of technology, exploring AI and building her journey one idea at a time. Her portfolio is where she shares her education, future projects and progress.", link:'about', chips:['education','learning','projects'] },
+ { id:'education', k:['educat','study','studying','universit','campus','degree','college','superior','qualification','parhai','padh','school','semester'], a:"Hadia is currently studying BS Artificial Intelligence at Superior University, Gold Campus, Pakistan. Her status is: currently studying.", more:"I don't have graduation dates, grades or awards for her, so I won't guess any.", link:'education', chips:['learning','projects','contact'] },
+ { id:'learning', k:['learn','journey','explor','topic','topics','growing','future technologies','creative','programming','artificial','intelligence'], a:"Her learning journey covers Artificial Intelligence (exploring), Programming (learning), Creative Thinking (developing) and Future Technologies (exploring). These are areas of interest, not claims of verified proficiency.", more:"The Learning section shows these four areas as cards. They describe where she is heading, not finished expertise.", link:'learning', chips:['projects','education','skills'] },
+ { id:'projects', k:['project','experiment','built','build','demo','showcase','creations','made'], a:"This portfolio includes a space for Hadia's projects and future experiments. Some items may still be marked as coming soon while her portfolio grows.", more:"Right now there are three placeholders: My First AI Experiment, Creative Digital Experience and Future Innovation. They are marked Coming Soon or In Progress, so there are no finished projects to claim yet.", link:'projects', chips:['learning','contact','experience'] },
+ { id:'experience', k:['experien','expert','professional','developer','job','hire','hiring','employ','intern','senior','work experience','engineer','company'], a:"Hadia is currently a student exploring artificial intelligence and technology. Her portfolio focuses on her learning journey rather than claiming professional experience.", link:'about', chips:['learning','projects','contact'] },
+ { id:'skills', k:['python','javascript','java','coding','code','language','languages','tools','skill','skills','tech stack','proficien','certif','award','awards','gpa','cgpa','grade','grades','achievement','achievements','resume','cv'], a:"I don't have verified details about specific skills, certifications, grades or achievements, so I won't make any up. What I can say is that she is exploring AI, programming, creative thinking and future technologies.", link:'learning', chips:['learning','education','contact'] },
+ { id:'location', k:['country','pakistan','city','lahore','location','located','based','address','nationality'], a:"Her portfolio lists Pakistan as her country. I don't have any more specific location details.", chips:['education','contact','about'] },
+ { id:'contact', k:['contact','email','mail','reach','touch','linkedin','github','phone','number','whatsapp','message','connect','social','talk'], a:"You can use the contact section on this website. Any available email or social links will be displayed there.", more:"The form checks your details and opens your email app. Nothing is sent until you send it there, and if no email is configured it tells you so.", link:'contact', chips:['about','education','projects'] },
+ { id:'secret', k:['api key','system prompt','password','instructions','prompt','secret','env','config','token','backend'], a:"I can't share configuration or private instructions. I'm happy to help with Hadia's portfolio though.", chips:['about','education','projects'] },
+ { id:'bot', k:['who are you','what are you','are you a','are you an','are you real','you human','you bot','chatgpt','openai','robot','gpt','your name'], a:"I'm Hadia's portfolio assistant, running in demo mode. I answer from a fixed set of verified details about her, so I'm not a live AI model.", chips:['about','education','projects'] },
+ { id:'help', k:['help','options','menu','what can you','can you do','commands'], a:"I can tell you about Hadia, her education, learning journey, projects, and how to get in touch. Tap a suggestion or just type a question.", chips:['about','education','learning'] },
+ { id:'thanks', k:['thanks','thank','shukriya','shukria','appreciate','awesome','nice','cool','great','perfect'], a:"You're welcome! 😊 Anything else you'd like to explore?", chips:['about','projects','contact'] },
+ { id:'bye', k:['bye','goodbye','later','allah hafiz','khuda hafiz','see you','cya'], a:"Thanks for visiting Hadia's portfolio. Have a lovely day! 👋" },
+ { id:'greet', k:['hi','hello','hey','salam','assalam','aoa','hola','yo','morning','evening','afternoon'], a:"Hello! 😊 I can tell you about Hadia's education, learning journey, projects, or how to get in touch.", chips:['about','education','projects'] }];
+
+const root = document.documentElement;
+function initTheme() {
+  const tb = document.getElementById('theme');
+  const set = t => { root.dataset.theme = t; localStorage.setItem('theme', t); tb.textContent = t === 'dark' ? '☾' : '☀'; window.dispatchEvent(new CustomEvent('themechange', { detail: t })); };
+  root.dataset.theme = localStorage.getItem('theme') || 'dark'; tb.textContent = root.dataset.theme === 'dark' ? '☾' : '☀';
+  tb.onclick = () => set(root.dataset.theme === 'dark' ? 'light' : 'dark');
+}
+const getTheme = () => root.dataset.theme;
+
+function initScene(canvas) {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches, mobile = innerWidth < 768;
+  const r = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: !mobile });
+  r.setPixelRatio(Math.min(devicePixelRatio, 2));
+  const scene = new THREE.Scene(), cam = new THREE.PerspectiveCamera(45, 1, .1, 100); cam.position.set(0, .4, 10);
+  const group = new THREE.Group(); scene.add(group);
+  const key = new THREE.PointLight(0x9565ff, 1.6, 40); key.position.set(3, 4, 4);
+  const rim = new THREE.PointLight(0xd8cbff, 1, 40); rim.position.set(-4, -1, 3);
+  scene.add(key, rim, new THREE.AmbientLight(0x9565ff, .4));
+  const orbMat = new THREE.MeshPhysicalMaterial({ color: 0x9565ff, roughness: .08, metalness: .1, clearcoat: 1, transparent: true, opacity: .85, flatShading: true });
+  const orb = new THREE.Mesh(new THREE.IcosahedronGeometry(1.3, 1), orbMat); orb.position.y = .5; group.add(orb);
+  const core = new THREE.Mesh(new THREE.IcosahedronGeometry(.6, 0), new THREE.MeshBasicMaterial({ color: 0xd8cbff, wireframe: true })); core.position.y = .5; group.add(core);
+  const plat = new THREE.Mesh(new THREE.CylinderGeometry(1.8, 2, .2, 64), new THREE.MeshStandardMaterial({ color: 0x3a2a6e, metalness: .3, roughness: .5, emissive: 0x1a1040 })); plat.position.y = -1.3; group.add(plat);
+  const rings = [[2.1, 1.2, 0], [2.6, .3, .9], [3.1, -.6, 1.7]].map(([rad, rx, rz], i) => {
+    const m = new THREE.Mesh(new THREE.TorusGeometry(rad, .012, 8, 128), new THREE.MeshBasicMaterial({ color: 0xb69aff, transparent: true, opacity: .7 }));
+    m.rotation.set(rx, 0, rz); m.position.y = .5; m.userData.s = .15 + i * .1; group.add(m); return m; });
+  const spheres = Array.from({ length: mobile ? 5 : 9 }, () => {
+    const s = new THREE.Mesh(new THREE.SphereGeometry(.07 + Math.random() * .07, 16, 16), new THREE.MeshBasicMaterial({ color: 0xb69aff }));
+    s.userData = { a: Math.random() * 6.28, rad: 2 + Math.random() * 1.5, sp: .2 + Math.random() * .4, y: Math.random() * 2 - .5 }; group.add(s); return s; });
+  const N = mobile ? 250 : 900, pos = new Float32Array(N * 3);
+  for (let i = 0; i < N * 3; i++) pos[i] = (Math.random() - .5) * 14;
+  const pg = new THREE.BufferGeometry(); pg.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+  const pm = new THREE.PointsMaterial({ color: 0xd8cbff, size: .03, transparent: true, opacity: .8 });
+  const stars = new THREE.Points(pg, pm); scene.add(stars);
+  const theme = () => { const l = getTheme() === 'light', c = l ? 0x7045e8 : 0x9565ff; orbMat.color.setHex(c); pm.color.setHex(l ? 0x7045e8 : 0xd8cbff); key.color.setHex(c); };
+  theme(); window.addEventListener('themechange', theme);
+  const size = () => { const w = canvas.clientWidth, h = canvas.clientHeight; r.setSize(w, h, false); cam.aspect = w / h; cam.updateProjectionMatrix(); };
+  new ResizeObserver(size).observe(canvas); size();
+  let mx = 0, my = 0, sy = 0, raf; const t0 = performance.now();
+  addEventListener('pointermove', e => { mx = e.clientX / innerWidth - .5; my = e.clientY / innerHeight - .5; });
+  addEventListener('scroll', () => sy = scrollY, { passive: true });
+  const frame = now => {
+    const t = (now - t0) / 1000, k = reduce ? 0 : 1;
+    group.rotation.y += (mx * .6 - group.rotation.y) * .04 + .003 * k; group.rotation.x += (my * .3 - group.rotation.x) * .04;
+    orb.rotation.y = t * .3 * k; core.rotation.x = t * .5 * k; orb.position.y = core.position.y = .5 + Math.sin(t) * .1 * k;
+    rings.forEach(m => m.rotation.z += m.userData.s * .01 * k);
+    spheres.forEach(s => { const d = s.userData; d.a += d.sp * .01 * k; s.position.set(Math.cos(d.a) * d.rad, d.y + Math.sin(t + d.a) * .2 * k, Math.sin(d.a) * d.rad); });
+    stars.rotation.y = t * .01 * k; group.position.y = sy * .002; cam.position.z = 10 + Math.min(sy / innerHeight, 1.5) * 1.2; group.rotation.z = sy * .0003;
+    r.render(scene, cam); raf = requestAnimationFrame(frame); };
+  const start = () => { cancelAnimationFrame(raf); raf = requestAnimationFrame(frame); };
+  document.addEventListener('visibilitychange', () => document.hidden ? cancelAnimationFrame(raf) : start()); start();
+}
+
+const mk = h => { const d = document.createElement('div'); d.innerHTML = h.trim(); return d.firstChild; };
+const norm = s => s.toLowerCase().replace(/[^a-z0-9\s']/g, ' ').replace(/\s+/g, ' ').trim();
+const lev = (a, b) => { const m = [...Array(a.length + 1)].map((_, i) => [i]); for (let j = 1; j <= b.length; j++) m[0][j] = j;
+  for (let i = 1; i <= a.length; i++) for (let j = 1; j <= b.length; j++) m[i][j] = Math.min(m[i-1][j] + 1, m[i][j-1] + 1, m[i-1][j-1] + (a[i-1] === b[j-1] ? 0 : 1)); return m[a.length][b.length]; };
+const hit = (n, ws, k) => k.includes(' ') ? n.includes(k) : ws.some(w => w === k || (k.length > 3 && w.startsWith(k)) || (k.length > 4 && w.length > 4 && lev(w, k) <= 1));
+const score = (n, e) => { const ws = n.split(' '); return e.k.reduce((s, k) => s + (hit(n, ws, k) ? (k.includes(' ') ? 2 : 1) : 0), 0); };
+const time = () => new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+const NAMES = { about: 'About', education: 'Education', learning: 'Learning', projects: 'Projects', contact: 'Contact' };
+const ICON = '<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L3 21l1.9-5.4A8 8 0 1 1 21 12z"/></svg>';
+function initChat() {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const el = mk(`<div class="chat"><button class="launch" aria-label="Open portfolio assistant" aria-expanded="false">${ICON}<i class="badge" hidden>1</i><span class="tip">Ask me about Hadia</span></button>
+  <div class="panel" hidden role="dialog" aria-label="Hadia's portfolio assistant"><header><b class="av">HN</b><div><strong>Hadia's Portfolio Assistant</strong><small><i class="dot"></i>Demo assistant · here to help you explore</small></div>
+  <button data-a="clear" aria-label="Restart conversation" title="Restart">↺</button><button data-a="close" aria-label="Minimize or close" title="Close">×</button></header>
+  <div class="msgs" aria-live="polite"></div><div class="quick"></div>
+  <div class="in"><input placeholder="Ask about Hadia…" maxlength="500" aria-label="Message"><button disabled aria-label="Send">➤</button></div></div></div>`);
+  document.body.append(el);
+  const q = s => el.querySelector(s), panel = q('.panel'), msgs = q('.msgs'), input = q('input'), send = q('.in button'), quick = q('.quick'), launch = q('.launch'), badge = q('.badge');
+  let last = null, skip = null, thinking = false, opened = false, hist = [];
+  try { hist = JSON.parse(sessionStorage.getItem('hn_chat') || '[]'); } catch {}
+  const save = () => { try { sessionStorage.setItem('hn_chat', JSON.stringify(hist.slice(-30))); } catch {} };
+  const down = () => { msgs.scrollTop = msgs.scrollHeight; };
+  const label = id => chat.labels[id] || id;
+  const started = () => el.classList.toggle('started', hist.some(h => h.who === 'u'));
+  function go(id) { const s = document.getElementById(id); if (!s) return;
+    s.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' }); s.classList.remove('flash'); void s.offsetWidth; s.classList.add('flash'); if (innerWidth <= 520) close(); }
+  function chipsEl(ids) { const w = mk('<div class="chips"></div>');
+    ids.forEach(id => { const b = mk('<button type="button"></button>'); b.textContent = label(id); b.onclick = () => ask(label(id), id); w.append(b); }); return w; }
+  function add(who, text, o = {}) {
+    const m = mk(`<div class="m ${who}"><span class="t"></span></div>`); msgs.append(m); const t = m.firstChild;
+    const fin = () => { if (o.link) { const a = mk('<button type="button" class="go"></button>'); a.textContent = 'Go to ' + NAMES[o.link] + ' →'; a.onclick = () => go(o.link); m.append(a); }
+      m.append(mk(`<small>${time()}</small>`)); if (o.chips) msgs.append(chipsEl(o.chips)); down(); };
+    if (who === 'u' || o.instant || reduce) { t.textContent = text; fin(); return Promise.resolve(); }
+    return new Promise(res => { const w = text.split(/(\s+)/); let i = 0;
+      const done = () => { clearInterval(iv); t.textContent = text; skip = null; fin(); res(); };
+      const iv = setInterval(() => { t.textContent += w[i++] || ''; down(); if (i >= w.length) done(); }, 20); skip = done; }); }
+  function answer(text, id) {
+    let it = id && kb.find(e => e.id === id); const n = norm(text), ws = n.split(' ');
+    if (!it) {
+      if (last && ws.length <= 5 && /\b(more|detail|details|elaborate|explain|aur|mazeed)\b/.test(n)) { if (!last.more) return { a: "That's everything I have verified on this topic. I'd rather not guess. Want to look at something else?", chips: ['about', 'education', 'projects'] }; const r = { ...last, a: last.more }; last = { ...last, more: null }; return r; }
+      let best = 0; for (const e of kb) { const s = score(n, e); if (s > best) { best = s; it = e; } }
+      if (!it) { last = null; return { a: chat.fallback, chips: ['about', 'education', 'projects'] }; } }
+    last = it; const base = ['about', 'education', 'learning', 'projects', 'contact'].filter(x => x !== it.id).slice(0, 3);
+    return { ...it, chips: it.chips || base }; }
+  async function ask(text, id) {
+    if (thinking) return; if (skip) skip(); msgs.querySelectorAll('.chips').forEach(c => c.remove());
+    hist.push({ who: 'u', text }); save(); started(); add('u', text); thinking = true;
+    const ty = mk('<div class="m a typing" aria-label="Assistant is typing"><i></i><i></i><i></i></div>'); msgs.append(ty); down();
+    const t0 = Date.now(); let r;
+    if (chat.mode === 'ai' && !id) { try { const x = await fetch('/api/chat', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ message: text }) });
+      const d = await x.json(); r = { a: x.ok ? d.reply : 'AI mode error: ' + (d.error || 'request failed'), chips: ['about', 'projects', 'contact'] }; }
+      catch { r = { a: 'The AI backend is unreachable. Start the server or switch chat.mode to "demo" in data.js.' }; } }
+    else r = answer(text, id);
+    await new Promise(s => setTimeout(s, Math.max(0, (reduce ? 120 : Math.min(450 + r.a.length * 3, 1000)) - (Date.now() - t0))));
+    ty.remove(); thinking = false; hist.push({ who: 'a', text: r.a, link: r.link, chips: r.chips }); save(); await add('a', r.a, { link: r.link, chips: r.chips }); }
+  function welcome() { hist.push({ who: 'a', text: chat.welcome }); save(); add('a', chat.welcome); }
+  function open() { panel.hidden = false; el.classList.add('open'); el.classList.remove('nudge'); launch.setAttribute('aria-expanded', 'true'); badge.hidden = true;
+    if (!opened) { opened = true; if (hist.length) { hist.forEach((h, i) => add(h.who, h.text, { instant: true, link: h.link, chips: i === hist.length - 1 ? h.chips : null })); started(); } else welcome(); }
+    input.focus(); down(); }
+  function close() { panel.hidden = true; el.classList.remove('open'); launch.setAttribute('aria-expanded', 'false'); launch.focus(); }
+  chat.quick.forEach(([l, id]) => { const b = mk('<button type="button"></button>'); b.textContent = l; b.onclick = () => ask(l, id); quick.append(b); });
+  const submit = () => { const v = input.value.trim(); if (!v || thinking) return; input.value = ''; send.disabled = true; ask(v); };
+  input.oninput = () => send.disabled = !input.value.trim(); input.onkeydown = e => { if (e.key === 'Enter') submit(); }; send.onclick = submit;
+  panel.onkeydown = e => { if (e.key === 'Escape') close(); };
+  launch.onclick = () => panel.hidden ? open() : close();
+  q('[data-a=close]').onclick = close;
+  q('[data-a=clear]').onclick = () => { if (skip) skip(); hist = []; last = null; msgs.innerHTML = ''; thinking = false; started(); welcome(); };
+  setTimeout(() => { if (!opened) { badge.hidden = false; el.classList.add('nudge'); } }, 7000);
+}
+
+const hasG = typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined';
+try { initTheme(); } catch (e) { console.error('theme', e); }
+try { initChat(); } catch (e) { console.error('chat', e); }
+try { if (typeof THREE !== 'undefined') initScene(document.getElementById('scene')); else console.warn('Three.js failed to load'); } catch (e) { console.error('3D scene', e); }
+if (hasG) gsap.registerPlugin(ScrollTrigger);
+const $ = id => document.getElementById(id), reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const card = p => `<article class="card tilt rv"><div class="ic">${p.icon || '◆'}</div><h3>${p.title}</h3><p>${p.description || ''}</p><span class="pill">${p.status}</span>${p.url ? ` <a href="${p.url}" target="_blank" rel="noopener">View →</a>` : ''}</article>`;
+$('learn').innerHTML = learning.map(card).join(''); $('proj').innerHTML = projects.map(card).join('');
+document.querySelectorAll('.tilt').forEach(c => {
+  c.onpointermove = e => { if (!hasG || e.pointerType === 'touch') return; const b = c.getBoundingClientRect(), x = (e.clientX - b.left) / b.width - .5, y = (e.clientY - b.top) / b.height - .5;
+    gsap.to(c, { rotateY: x * 12, rotateX: -y * 12, transformPerspective: 700, duration: .35, overwrite: 'auto' }); };
+  c.onpointerleave = () => hasG && gsap.to(c, { rotateX: 0, rotateY: 0, duration: .5, overwrite: 'auto' }); });
+const nav = $('links'), links = [...nav.querySelectorAll('a')];
+const io = new IntersectionObserver(es => es.forEach(e => e.isIntersecting && links.forEach(a => a.classList.toggle('on', a.hash === '#' + e.target.id))), { threshold: .5 });
+document.querySelectorAll('section').forEach(s => io.observe(s));
+$('menu').onclick = () => nav.classList.toggle('open'); links.forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
+addEventListener('scroll', () => { $('progress').style.width = scrollY / (document.body.scrollHeight - innerHeight) * 100 + '%'; $('top').classList.toggle('show', scrollY > 600); document.querySelector('.nav').classList.toggle('sm', scrollY > 80); }, { passive: true });
+$('top').onclick = () => scrollTo({ top: 0, behavior: 'smooth' });
+if (hasG && !reduce) {
+  gsap.from('.hero-text > *', { y: 40, opacity: 0, stagger: .12, duration: 1, delay: .2, ease: 'power3.out', clearProps: 'transform' });
+  gsap.from('#scene', { scale: .7, opacity: 0, duration: 1.6, ease: 'power3.out' });
+  const hero = { trigger: '#home', start: 'top top', end: 'bottom top', scrub: true };
+  gsap.to('.hero-text', { yPercent: -25, opacity: 0, ease: 'none', scrollTrigger: hero });
+  gsap.to('#scene', { yPercent: 12, scale: 1.12, ease: 'none', scrollTrigger: hero });
+  gsap.to('.g1', { y: -400, ease: 'none', scrollTrigger: { trigger: document.body, start: 0, end: 'max', scrub: 1 } });
+  gsap.to('.g2', { y: 300, x: -120, ease: 'none', scrollTrigger: { trigger: document.body, start: 0, end: 'max', scrub: 1 } });
+  document.querySelectorAll('section h2').forEach(h => { h.classList.remove('rv');
+    h.innerHTML = h.textContent.split(' ').map(w => `<span class="w"><span>${w}</span></span>`).join('');
+    gsap.from(h.querySelectorAll('.w > span'), { yPercent: 115, rotate: 6, stagger: .07, duration: .9, ease: 'power4.out', scrollTrigger: { trigger: h, start: 'top 88%' } }); });
+  const items = gsap.utils.toArray('.rv, form label'); gsap.set(items, { y: 55, opacity: 0, rotateX: -14, transformPerspective: 800 });
+  ScrollTrigger.batch(items, { start: 'top 90%', once: true, onEnter: b => gsap.to(b, { y: 0, opacity: 1, rotateX: 0, stagger: .12, duration: .9, ease: 'power3.out', overwrite: 'auto' }) });
+  gsap.fromTo('.timeline', { '--t': 0 }, { '--t': 1, ease: 'none', scrollTrigger: { trigger: '.timeline', start: 'top 85%', end: 'bottom 55%', scrub: true } });
+  gsap.fromTo('.mono', { rotateY: -80 }, { rotateY: 0, ease: 'none', scrollTrigger: { trigger: '#about', start: 'top 80%', end: 'center 50%', scrub: true } });
+  addEventListener('load', () => ScrollTrigger.refresh()); }
+const s = $('social');
+if (contact.email) s.innerHTML += `<a href="mailto:${contact.email}">Email</a> `;
+if (contact.linkedin) s.innerHTML += `<a href="${contact.linkedin}" target="_blank" rel="noopener">LinkedIn</a> `;
+if (contact.github) s.innerHTML += `<a href="${contact.github}" target="_blank" rel="noopener">GitHub</a>`;
+const form = $('form'), result = $('result');
+form.onsubmit = e => { e.preventDefault(); let ok = true;
+  [...form.elements].filter(f => f.name).forEach(f => { const sm = f.parentElement.querySelector('small'); let m = '';
+    if (!f.value.trim()) m = 'This field is required.'; else if (f.type === 'email' && !/^\S+@\S+\.\S+$/.test(f.value)) m = 'Enter a valid email.';
+    sm.textContent = m; f.setAttribute('aria-invalid', !!m); if (m) ok = false; });
+  if (!ok) { result.textContent = 'Please fix the errors above.'; return; }
+  if (!contact.email) { result.textContent = 'Contact email is not configured yet, so nothing was sent.'; return; }
+  const d = Object.fromEntries(new FormData(form)); result.textContent = 'Opening your email app. Your message is not sent until you send it there.';
+  location.href = `mailto:${contact.email}?subject=${encodeURIComponent(d.subject)}&body=${encodeURIComponent(d.message + '\n\n— ' + d.name + ' (' + d.email + ')')}`; };
+
+</script></body></html>
